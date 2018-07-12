@@ -2,13 +2,13 @@ const secondHand = document.querySelector('.second-hand');
 const minuteHand = document.querySelector('.min-hand');
 const hourHand = document.querySelector('.hour-hand');
 
-function secondHandRolloverStart(deg) {
-  secondHand.classList.add('noTransition');
-  secondHand.style.transform = `rotate(${deg-360}deg)`;
+function rolloverFixStart(hand, deg) {
+  hand.classList.add('noTransition');
+  hand.style.transform = `rotate(${deg-360}deg)`;
 }
 
-function secondHandRolloverEnd(deg) {
-  secondHand.classList.remove('noTransition');
+function rolloverFixEnd(hand) {
+  hand.classList.remove('noTransition');
 }
 
 function setDate() {
@@ -18,20 +18,22 @@ function setDate() {
   const hours = now.getHours();
 
   const secondsDegrees = ((seconds / 60) * 360) + 90;
-  const minutesDegrees = ((minutes / 60) * 360) + 90;
-  const hoursDegrees = (((hours % 12) / 12) * 360) + 90;
+  const minutesDegrees = ((((minutes + seconds / 60) / 60) * 360)) + 90;
+  const hoursDegrees = ((((hours + minutes / 60 + seconds / 3600) % 12) / 12) * 360) + 90;
 
   secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
   minuteHand.style.transform = `rotate(${minutesDegrees}deg)`;
   hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
 
+  console.log(`${hours}:${minutes}:${seconds}`);
+
   if (seconds === 59) {
     setTimeout(function() {
-      secondHandRolloverStart(secondsDegrees)
+      rolloverFixStart(secondHand, secondsDegrees);
     }, 500 );
 
     setTimeout(function() {
-      secondHandRolloverEnd(secondsDegrees)
+      rolloverFixEnd(secondHand);
     }, 800);
   }
 }
