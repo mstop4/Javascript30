@@ -25,8 +25,11 @@ function setDate() {
   minuteHand.style.transform = `rotate(${minutesDegrees}deg)`;
   hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
 
-  console.log(`${hours}:${minutes}:${seconds}`);
-
+  // This fixes the rotation glitch that occurs when the second hand
+  // rolls over from :59 to :00.
+  // Minute and hour hands don't need this fix since they move to slowly
+  // to warrant using transitions.
+  
   if (seconds === 59) {
     setTimeout(function() {
       rolloverFixStart(secondHand, secondsDegrees);
@@ -38,4 +41,6 @@ function setDate() {
   }
 }
 
+// Init clock, then update every second 
+setDate();
 setInterval(setDate, 1000);

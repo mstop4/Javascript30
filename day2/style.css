@@ -45,11 +45,19 @@ body {
   top:50%;
   transform-origin: 100%;
   transform: rotate(90deg);
+  border-radius: 3px;
 }
 
 .second-hand {
+  background: crimson;
   transition: all 0.05s;
   transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.hour-hand {
+  background: mediumblue;
+  width: 35%;
+  left: 15%;
 }
 
 .noTransition {
