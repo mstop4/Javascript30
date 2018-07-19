@@ -9,3 +9,4 @@
 [Day 5 - Flex Panels 💪](https://mstop4.github.io/Javascript30/day5/index.html)  
 [Day 6 - Type Ahead 👀](https://mstop4.github.io/Javascript30/day6/index.html)  
 [Day 7 - Array Cardio 💪💪](https://mstop4.github.io/Javascript30/day7/index.html)  
+[Day 8 - HTML5 Canvas](https://mstop4.github.io/Javascript30/day8/index.html)
