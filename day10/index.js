@@ -1,6 +1,5 @@
 const checkboxes = document.querySelectorAll('.inbox [type=checkbox]');
-let laskChecked;
-console.dir(checkboxes);
+let lastChecked;
 
 function handleCheck(e) {
   if (e.shiftKey && this.checked){
