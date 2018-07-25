@@ -42,4 +42,4 @@ canvas.addEventListener('mousedown', (e) => {
 });
 
 canvas.addEventListener('mouseup', () => isDrawing = false);
-canvas.addEventListener('museout', () => isDrawing = false);
+canvas.addEventListener('mouseout', () => isDrawing = false);
