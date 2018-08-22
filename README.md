@@ -14,4 +14,5 @@
 [Day 10 - Hold Shift to Check Multiple Checkboxes](https://mstop4.github.io/Javascript30/day10/index.html)  
 [Day 11 - HTML Video Player](https://mstop4.github.io/Javascript30/day11/index.html)  
 [Day 12 - Key Detection](https://mstop4.github.io/Javascript30/day12/index.html)  
-[Day 13 - Slide in on Scroll](https://mstop4.github.io/Javascript30/day13/index.html)
+[Day 13 - Slide in on Scroll](https://mstop4.github.io/Javascript30/day13/index.html)  
+[Day 14 - JS Reference VS Copy](https://mstop4.github.io/Javascript30/day14/index.html)
